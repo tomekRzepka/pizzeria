@@ -1,0 +1,68 @@
+#baner {
+    background-color: #4E885C;
+    color: orange;
+    text-align: center;
+    height: 110px;
+}
+
+#lewy {
+    background-color: #72A37D;
+    width: 30%;
+    height: 300px;
+    float: left;
+
+}
+
+#srodkowy {
+    background-color: #A2C3A9;
+    width: 40%;
+    height: 300px;
+    float: left;
+
+}
+
+#prawy {
+    background-color: #72A37D;
+    text-align: center;
+    width: 30%;
+    height: 300px;
+    float: right;
+
+}
+
+#dolny {
+    background-color: #A2C3A9;
+    text-align: center;
+    height: 250px;
+    clear: both;
+    margin-top: 10px;
+}
+
+#stopka {
+    background-color: #4E885C;
+    color: orange;
+    width: 100%;
+    float: left;
+}
+
+.menu-list {
+    list-style-type: none;
+    counter-reset: my-counter;
+}
+
+.menu-list li::before {
+    content: counter(my-counter) ". ";
+    counter-increment: my-counter;
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    margin-right: 10em;
+}
+
+.download-button {
+    margin-left: 170px;
+    height: 30px;
+    width: 200px;
+    background-color: orange;
+    text-align: center;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="styl6.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+</head>
+<body>
+<div id="baner">
+    <h1>Witaj w Pizzerii<a href="#"><img alt="pizzeria logo" height="100" src="images/logo.png" width="150"/></a></h1>
+</div>
+<div align="left" class="center_row">
+    <div id="lewy">
+        <p>U nas zamówisz pizzę z dowozem</p>
+        <a href="images/logo.png">Nasze logo </a>
+    </div>
+    <div align="middle" id="srodkowy">
+        <h3>Pizzeria Margherita</h3>
+        <p>ul. Botaniczna5, Zielona góra</p>
+        <a href="#"><img alt="pizza-img" height="300" src="images/pizza.png" width="600"/></a>
+    </div>
+    <div align="right" id="prawy">
+        <h3>Oferta</h3>
+        <div class="blok_menu">
+            <ol class="menu-list">
+                <li>Pizza</li>
+                <li>Lasagne</li>
+                <li>Sałatki</li>
+                <!-- Dodaj więcej wartości, jeśli jest taka potrzeba -->
+            </ol>
+        </div>
+        <div class="download-button">
+            <a href>Pobierz pełną ofertę</a>
+        </div>
+
+    </div>
+</div>
+<div id="dolny">
+    <h3>Oblicz koszt dostawy</h3>
+    <input id="fromZielonaGóra" type="checkbox"><label for="fromZielonaGóra"> Jestem z Zielonej Góry</label>
+    <p>albo</p>
+    <label for="distance">Podaj liczbę kilometrów od Zielonej Góry:</label>
+    <input id="distance" min="0" name="distance" step="1" type="number" value="0">
+    <button id="obliczButton">Oblicz</button>
+    <p id="wynik"></p>
+</div>
+
+<script>
+    const obliczButton = document.getElementById('obliczButton');
+    const distanceInput = document.getElementById('distance');
+    const wynik = document.getElementById('wynik');
+
+    obliczButton.addEventListener('click', function () {
+        const distanceValue = parseFloat(distanceInput.value);
+        if (!isNaN(distanceValue)) {
+            const result = distanceValue * 2;
+            wynik.textContent = 'Wynik: ' + result + 'zł';
+        } else {
+            wynik.textContent = 'Wprowadź poprawną liczbę kilometrów.';
+        }
+    });
+</script>
+<div id="stopka">
+    <p>Stronę opracował TOMASZ RZEPKA 129245</p>
+</div>
+</body>
+</html>
